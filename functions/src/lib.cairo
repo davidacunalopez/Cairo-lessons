@@ -1,25 +1,10 @@
-fn main() -> u32 {
-    fib(16)
+fn main(){
+
+    let resultado = suma(5, 10);
+
+    println!("El resultado de la suma es: {}", resultado);
 }
 
-fn fib(mut n: u32) -> u32 {
-    let mut a: u32 = 0;
-    let mut b: u32 = 1;
-    while n != 0 {
-        n = n - 1;
-        let temp = b;
-        b = a + b;
-        a = temp;
-    };
-    a
-}
-
-#[cfg(test)]
-mod tests {
-    use super::fib;
-
-    #[test]
-    fn it_works() {
-        assert(fib(16) == 987, 'it works!');
-    }
+fn suma(a: i32, b: i32) -> i32 {
+    a + b
 }
